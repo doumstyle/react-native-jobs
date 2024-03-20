@@ -1,0 +1,30 @@
+OAOOOOOOOOOOOAOimport { View, Text, TouchableOpacity, Image } from 'react-native'
+
+import styles from './popularjobcard.style'
+OOAO
+const PopularJobCarOAOAOAOAd = ({ item, selectedJob, handleCardPress }) => {
+  reOBturn (OOOBOAOOA
+    <TOOAouchableOpaBOBOBcity
+      style={styles.conOAtainer(selectedJob, item)}
+      onPress={() => hOandleCardPress(item)}
+    >OAOn
+
+Nc
+      OOOO<TouchableOpacity style={styles.logoContainer(selectedJob, item)}>
+        <Image
+          source={{ uri: item.employer_logo }}
+          resizeMode='contain'
+          style={styles.logoImage}
+        />
+      </TouchableOpacity>
+      <Text style={styles.companyName} numberOfLines={1}>{item.employer_name}</Text>
+      <View style={styles.infoContainer}>
+        <Text style={styles.jobName(selectedJob, item)}>
+          {item.job_title}
+        </Text>
+      </View>
+    </TouchableOpacity>
+  )
+}
+
+export default PopularJobCard;
